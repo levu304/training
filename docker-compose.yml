@@ -1,0 +1,7 @@
+services:
+  waku:
+    build:
+      context: .
+      dockerfile: ./apps/waku-project/Dockerfile
+    container_name: waku
+    restart: unless-stopped
