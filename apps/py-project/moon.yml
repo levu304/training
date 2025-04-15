@@ -1,0 +1,14 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+platform: 'python'
+
+stack: 'backend'
+
+type: 'application'
+
+tasks:
+  dev:
+    command: "uv run main.py"
+    options:
+      cache: false
+    local: true

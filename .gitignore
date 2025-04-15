@@ -5,3 +5,11 @@
 
 node_modules
 dist
+
+# The `outDir` for declarations
+lib/
+# Build cache manifests
+*.tsbuildinfo
+
+.venv
+venv

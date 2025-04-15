@@ -1,15 +1,15 @@
 {
+  "extends": "../../tsconfig.options.json",
   "compilerOptions": {
-    "strict": true,
-    "target": "esnext",
+    "noEmit": true,
     "downlevelIteration": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "skipLibCheck": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "types": ["react/experimental"],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      ":/*": ["./src/*"]
+    }
   }
 }
