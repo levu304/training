@@ -33,7 +33,7 @@ RUN moon docker setup
 # Copy source files
 COPY --from=skeleton /app/.moon/docker/sources .
 
+RUN moon run waku-project:build
+
 # Prune workspace
 RUN moon docker prune
-
-# CMD
