@@ -1,0 +1,24 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+platform: 'bun'
+
+language: 'typescript'
+
+stack: 'frontend'
+
+type: 'application'
+    
+tasks:
+  dev:
+    command: "bun run dev"
+    options:
+      cache: false
+    local: true
+
+  build:
+    command: "bun run build"
+    deps:
+      - '^:build'
+
+  start:
+    command: "bun run start"
