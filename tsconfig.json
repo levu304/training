@@ -3,7 +3,13 @@
   "files": [],
   "references": [
     {
-      "path": "apps/py-project"
+      "path": "apps/waku-project"
+    },
+    {
+      "path": "apps/next-fifteen"
+    },
+    {
+      "path": "apps/fastify-react"
     }
   ]
 }

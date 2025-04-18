@@ -3,5 +3,10 @@ $schema: 'https://moonrepo.dev/schemas/toolchain.json'
 bun:
   installArgs: ['--frozen-lockfile']
 
+node:
+  packageManager: 'pnpm'
+  pnpm:
+    installArgs: ['--frozen-lockfile']
+
 python:
   packageManager: 'uv'

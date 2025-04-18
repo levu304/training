@@ -1,6 +1,6 @@
 $schema: 'https://moonrepo.dev/schemas/project.json'
 
-platform: 'bun'
+platform: 'node'
 
 language: 'typescript'
 
@@ -10,12 +10,12 @@ type: 'application'
     
 tasks:
   dev:
-    command: "bun run dev"
+    command: "pnpm run dev"
     options:
       cache: false
     local: true
 
   build:
-    command: "bun run build"
+    command: "pnpm run build"
     deps:
       - '^:build'
