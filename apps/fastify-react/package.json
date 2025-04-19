@@ -17,6 +17,7 @@
     "@swc/cli": "^0.7.3",
     "@swc/core": "^1.11.21",
     "@tailwindcss/vite": "^4.1.4",
+    "@types/bun": "^1.2.10",
     "@types/node": "^20.17.30",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",

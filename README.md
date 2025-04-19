@@ -1,79 +1,96 @@
-# Waku Project
+# Monorepo Training Project
 
-A minimal starter template for building web applications with [Waku](https://waku.gg/), [React 19](https://react.dev/), [Bun](https://bun.sh/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/).
+This repository is a monorepo setup for experimenting with various web and data technologies. It utilizes [Moon](https://moonrepo.dev/) for managing the workspace, [Bun](https://bun.sh/) for JavaScript/TypeScript projects, and [UV](https://github.com/astral-sh/uv) for Python projects.
 
-## Features
+## Workspace Structure
 
-- Minimal setup with Waku (React framework)
-- TypeScript support
-- Bun as the runtime and package manager
-- Tailwind CSS for styling
-- Example Counter component
-- Basic routing (Home and About pages)
-- Static rendering
+```
+.
+├── .moon/              # Moon configuration
+├── apps/
+│   ├── fastify-react/  # Fastify backend with React frontend (Vite)
+│   ├── next-fifteen/   # Next.js 15 application
+│   ├── py-project/     # Python project using Polars
+│   └── waku-project/   # Waku (React Server Components) application
+├── packages/           # Shared packages (if any)
+├── package.json        # Root Node.js package configuration (workspaces)
+├── pyproject.toml      # Root Python project configuration (UV workspace)
+├── tsconfig.json       # Root TypeScript configuration
+├── bun.lock            # Bun lockfile
+├── uv.lock             # UV lockfile
+└── README.md           # This file
+```
+
+## Technologies Used
+
+- **Monorepo Management:** [Moon](https://moonrepo.dev/)
+- **JavaScript Runtime/Toolkit:** [Bun](https://bun.sh/)
+- **Python Package Management:** [UV](https://github.com/astral-sh/uv)
+- **Frontend Frameworks:**
+    - [React](https://react.dev/)
+    - [Next.js](https://nextjs.org/)
+    - [Waku](https://waku.gg/)
+- **Backend Frameworks:**
+    - [Fastify](https://fastify.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Data Processing (Python):** [Polars](https://pola.rs/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/), [Python](https://www.python.org/)
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Bun](https://bun.sh/) installed (v1.0 or later recommended)
+- [Bun](https://bun.sh/) installed
+- [Python](https://www.python.org/) >= 3.13 installed
+- [UV](https://github.com/astral-sh/uv) installed (`pip install uv` or `brew install uv`)
 
-### Install dependencies
+### Installation
+
+Install dependencies for all projects:
 
 ```sh
-cd apps/waku-project
+# Install Node.js dependencies
 bun install
+
+# Install Python dependencies
+uv sync
 ```
 
-### Development
+### Running Projects
 
-Start the development server:
+You can run individual projects using Moon commands from the root directory.
+
+**Example: Run the Fastify/React app development server:**
 
 ```sh
-bun run dev
+moon run fastify-react:dev
 ```
 
-The app will be available at [http://localhost:3000](http://localhost:3000) by default.
-
-### Build
-
-To build the app for production:
+**Example: Run the Next.js app development server:**
 
 ```sh
-bun run build
+moon run next-fifteen:dev
 ```
 
-### Start (Production)
-
-To start the production server:
+**Example: Run the Waku app development server:**
 
 ```sh
-bun run start
+moon run waku-project:dev
 ```
 
-## Project Structure
+**Example: Run the Python script:**
 
-```
-.
-├── apps/
-│   └── waku-project/
-│       ├── public/             # Static assets (e.g., images, favicon)
-│       ├── src/
-│       │   ├── components/     # React components (Counter, Header, Footer)
-│       │   ├── pages/          # App pages (index.tsx, about.tsx, _layout.tsx)
-│       │   └── styles.css      # Tailwind CSS styles
-│       ├── package.json        # Project metadata and scripts
-│       ├── postcss.config.js   # PostCSS configuration
-│       ├── tsconfig.json       # TypeScript configuration
-│       ├── bun.lock            # Bun lockfile
-│       ├── moon.yml            # Moonrepo project configuration
-│       └── README.md           # App-specific documentation (if any)
-├── packages/                   # (Optional) Shared libraries or code
-└── README.md                   # Project documentation (this file)
+```sh
+moon run py-project:dev
 ```
 
-## About
+Refer to the `moon.yml` file within each `apps/*` directory for available tasks.
 
-This project demonstrates a minimal setup for building modern web applications using Waku, React, Bun, and TypeScript. It includes basic routing, a counter example, and uses Tailwind CSS for styling.
+## Individual App READMEs
 
-Feel free to use this as a starting point for your own projects!
+For more specific details about each application, please refer to their respective README files:
+
+- [`apps/fastify-react/README.md`](apps/fastify-react/README.md) (Note: Needs creation)
+- [`apps/next-fifteen/README.md`](apps/next-fifteen/README.md)
+- [`apps/py-project/README.md`](apps/py-project/README.md)
+- [`apps/waku-project/README.md`](apps/waku-project/README.md)

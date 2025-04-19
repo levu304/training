@@ -2,6 +2,8 @@
     "name": "root",
     "version": "1.0.0",
     "workspaces": [
+        "apps/fastify-react",
+        "apps/next-fifteen",
         "apps/waku-project"
     ]
 }
