@@ -1,7 +1,9 @@
 $schema: 'https://moonrepo.dev/schemas/toolchain.json'
 
-bun:
-  installArgs: ['--frozen-lockfile']
+node:
+  packageManager: bun
+  bun:
+    installArgs: ['--frozen-lockfile']
 
 python:
   packageManager: 'uv'
