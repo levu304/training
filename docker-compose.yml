@@ -32,3 +32,12 @@ services:
       NODE_ENV: production
     ports:
       - 8080:80
+
+  dioxus-web-app:
+    build:
+      context: .
+      dockerfile: ./apps/dioxus-web-app/Dockerfile
+    container_name: dioxus-web-app
+    restart: unless-stopped
+    ports:
+      - 8080:8080

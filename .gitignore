@@ -13,3 +13,5 @@ lib/
 
 .venv
 venv
+
+**/target
