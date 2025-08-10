@@ -9,3 +9,5 @@ python:
   packageManager: 'uv'
 
 rust: {}
+
+unstable_go: {}

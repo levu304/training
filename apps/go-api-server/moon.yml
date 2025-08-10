@@ -1,0 +1,18 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+language: go
+
+layer: application
+
+stack: backend
+
+docker:
+  file:
+    image: golang:1.24.5
+
+tasks:
+  dev:
+    command: 'go run main.go'
+
+  build:
+    command: 'go build -a -o bin/main main.go'
