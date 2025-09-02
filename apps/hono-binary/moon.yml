@@ -1,0 +1,25 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+platform: 'node'
+
+language: 'typescript'
+
+stack: 'backend'
+
+type: 'application'
+
+docker:
+  file:
+    image: 'oven/bun:slim'
+
+tasks:
+  dev:
+    command: "bun run dev"
+    options:
+      cache: false
+    local: true
+
+  build:
+    command: "bun run build"
+    deps:
+      - '^:build'
