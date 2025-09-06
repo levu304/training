@@ -5,6 +5,8 @@ node:
   bun:
     installArgs: ['--frozen-lockfile']
 
+bun: {}
+
 python:
   packageManager: 'uv'
 

@@ -5,6 +5,8 @@
         "apps/fastify-react",
         "apps/next-fifteen",
         "apps/waku-project",
-        "apps/nuxt-app"
+        "apps/nuxt-app",
+        "apps/triplit-remote-server",
+        "apps/hono-binary"
     ]
 }

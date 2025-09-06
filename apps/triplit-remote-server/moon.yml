@@ -1,0 +1,22 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+platform: 'node'
+
+language: 'typescript'
+
+stack: 'backend'
+
+type: 'application'
+
+docker:
+  file:
+    image: 'node:22-slim'
+    
+tasks:
+  compile:
+    command: "bun run compile"
+    
+  build:
+    command: "bun run build"
+    deps:
+      - '^:build'
